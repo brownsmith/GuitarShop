@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Test React Ecom Store KJHKJHKJHK</h1>
+          <h1 className="App-title">Test React Ecom Store</h1>
         </header>
         <ProductsWrapper data={this._loadData()} />
       </div>
