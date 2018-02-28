@@ -9,3 +9,8 @@ cd GuitarShop/my-app
 yarn
 yarn start
 ```
+## To run the tests:
+
+```sh
+yarn test
+```
