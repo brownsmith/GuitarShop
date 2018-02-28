@@ -7,17 +7,25 @@ export default class ProductsWrapper extends Component {
     productDetails: PropTypes.object,
   };
 
-  _createImage = image => {
+  _createImage = (image) => {
     return <img src={require('../data/' + image)} alt="" />;
   };
+
+  _addToCart = (spec) => {
+    console.log('added ' + spec.name + ' to cart');
+  }
 
   render() {
     return (
       <div className="product">
         {this._createImage(this.props.productDetails.spec.image)}
         <p className="productTitle">
-          FOO {this.props.productDetails.make} {this.props.productDetails.model}
+          {this.props.productDetails.make} {this.props.productDetails.model}
         </p>
+        <p className="description">
+          {this.props.productDetails.spec.description}
+        </p>
+        <button onClick={() => this._addToCart(this.props.productDetails.spec)}>Add to Cart</button>
       </div>
     );
   }

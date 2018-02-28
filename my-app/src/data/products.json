@@ -24,11 +24,22 @@
     "make": "Fender",
     "model": "Stratocaster",
     "spec": {
+      "name": "Olympic White Strat",
+      "image": "olympic-white-strat.jpg",
+      "neck": "Rosewood",
+      "body": "Olympic white",
+      "description": "The Rosewood fretboard also gives you a bit more warmth and depth of tone than Maple would."
+    }
+  },
+  {
+    "make": "Fender",
+    "model": "Stratocaster",
+    "spec": {
       "name": "Olive Green Strat",
       "image": "olive-maple-strat.jpg",
       "neck": "Rosewood",
       "body": "Olive green",
-      "description": "The Rosewood fretboard also gives you a bit more warmth and depth of tone than Maple would."
+      "description": "The V-mod pickups have each been voiced for their position in the guitar rather than the same pickup put into each position as they were before."
     }
   },
   {
@@ -40,17 +51,6 @@
       "neck": "Rosewood",
       "body": "Olympic white",
       "description": "The American Professional range has replaced the American Standards. Made in America with high-end hardware and each one comes with an Elite hardshell case."
-    }
-  },
-  {
-    "make": "Fender",
-    "model": "Stratocaster",
-    "spec": {
-      "name": "Olympic White Strat",
-      "image": "olympic-white-strat.jpg",
-      "neck": "Rosewood",
-      "body": "Olympic white",
-      "description": "The V-mod pickups have each been voiced for their position in the guitar rather than the same pickup put into each position as they were before."
     }
   },
   {
