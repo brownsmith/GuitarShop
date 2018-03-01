@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './ProductsWrapper.css';
-import Product from './Product.js';
+import Product from '../Product/Product.js';
 
 export default class ProductsWrapper extends Component {
   static propTypes = {
@@ -15,7 +15,6 @@ export default class ProductsWrapper extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <h3>Your search returned {this.props.data.length} results</h3>

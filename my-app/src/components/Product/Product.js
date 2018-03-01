@@ -7,8 +7,8 @@ export default class ProductsWrapper extends Component {
     productDetails: PropTypes.object,
   };
 
-  _createImage = (image) => {
-    return <img src={require('../data/' + image)} alt="" />;
+  _createImage = productDetails => {
+    return <img src={require('../../images/' + productDetails.spec.image)} alt={productDetails.make + ' ' + productDetails.model} />;
   };
 
   _addToCart = (spec) => {
@@ -18,7 +18,7 @@ export default class ProductsWrapper extends Component {
   render() {
     return (
       <div className="product">
-        {this._createImage(this.props.productDetails.spec.image)}
+        {this._createImage(this.props.productDetails)}
         <p className="productTitle">
           {this.props.productDetails.make} {this.props.productDetails.model}
         </p>
