@@ -23,7 +23,10 @@ export default class ProductsWrapper extends Component {
           {this.props.productDetails.make} {this.props.productDetails.model}
         </p>
         <p className="description">
-          {this.props.productDetails.spec.description}
+          {this.props.productDetails.spec.name}
+        </p>
+        <p className="price">
+          {this.props.productDetails.price}
         </p>
         <button onClick={() => this._addToCart(this.props.productDetails.spec)}>Add to Cart</button>
       </div>

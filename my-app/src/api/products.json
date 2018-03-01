@@ -2,6 +2,7 @@
   {
     "make": "Fender",
     "model": "Stratocaster",
+    "price": "£1019",
     "spec": {
       "name": "3 Tone Strat",
       "image": "3tone-strat.jpg",
@@ -12,6 +13,7 @@
   {
     "make": "Fender",
     "model": "Stratocaster",
+    "price": "£1019",
     "spec": {
       "name": "Black Strat",
       "image": "black-strat.jpg",
@@ -23,6 +25,7 @@
   {
     "make": "Fender",
     "model": "Stratocaster",
+    "price": "£1229",
     "spec": {
       "name": "Olympic White Strat",
       "image": "olympic-white-strat.jpg",
@@ -34,6 +37,7 @@
   {
     "make": "Fender",
     "model": "Stratocaster",
+    "price": "£999",
     "spec": {
       "name": "Olive Green Strat",
       "image": "olive-maple-strat.jpg",
@@ -45,6 +49,7 @@
   {
     "make": "Fender",
     "model": "Stratocaster",
+    "price": "£1129",
     "spec": {
       "name": "Olympic White Strat",
       "image": "olympic-white-maple.jpg",
@@ -56,6 +61,7 @@
   {
     "make": "Fender",
     "model": "Stratocaster",
+    "price": "£1129",
     "spec": {
       "name": "Sienna Burst Strat",
       "image": "sienna-burst-strat.jpg",
