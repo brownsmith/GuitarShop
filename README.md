@@ -11,6 +11,8 @@ yarn start
 ```
 ## To run the tests:
 
+GuitarShop uses [Jest](https://facebook.github.io/jest/) as its test runner. Jest is a Node-based runner. This means that the tests always run in a Node environment and not in a real browser.
+
 ```sh
 yarn test
 ```
