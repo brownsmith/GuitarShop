@@ -16,7 +16,7 @@ export default class ProductsWrapper extends Component {
 
   render() {
     return (
-      <div>
+      <div className="productsWrapperComponent">
         <h3>Your search returned {this.props.data.length} results</h3>
         <div className="productsWrapper">{this._renderProducts()}</div>
       </div>

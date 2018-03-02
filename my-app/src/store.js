@@ -25,3 +25,6 @@ const store = createStore(
 )
 
 export default store
+
+// Notes on createStore:
+// https://redux.js.org/api-reference/createstore

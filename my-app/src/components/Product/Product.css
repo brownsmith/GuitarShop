@@ -1,6 +1,6 @@
 .product {
-  width: 33%;
-  border: 1px solid #eee;
+  width: calc(33% - 40px);
+  padding: 20px;
 }
 .description {
   font-size: 0.8rem;
