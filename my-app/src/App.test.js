@@ -6,8 +6,10 @@ import App from './App';
 
 configure({ adapter: new Adapter() });
 
-it('renders without crashing, LOL', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+  it('renders without crashing, LOL', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
 });
