@@ -9,12 +9,17 @@ export default class Product extends Component {
   };
 
   _createImage = productDetails => {
-    return <img src={require('../../images/' + productDetails.spec.image)} alt={productDetails.make + ' ' + productDetails.model} />;
+    return (
+      <img
+        src={require('../../images/' + productDetails.spec.image)}
+        alt={productDetails.make + ' ' + productDetails.model}
+      />
+    );
   };
 
-  _addToCart = (spec) => {
+  _addToCart = spec => {
     console.log('added ' + spec.name + ' to cart');
-  }
+  };
 
   render() {
     return (
@@ -24,13 +29,14 @@ export default class Product extends Component {
         <p className="productTitle">
           {this.props.productDetails.make} {this.props.productDetails.model}
         </p>
-        <p className="description">
-          {this.props.productDetails.spec.name}
-        </p>
-        <p className="price">
-          {this.props.productDetails.price}
-        </p>
-        <button className="button" onClick={() => this._addToCart(this.props.productDetails.spec)}>Add to Cart</button>
+        <p className="description">{this.props.productDetails.spec.name}</p>
+        <p className="price">{this.props.productDetails.price}</p>
+        <button
+          className="button"
+          onClick={() => this._addToCart(this.props.productDetails.spec)}
+        >
+          Add to Cart
+        </button>
       </div>
     );
   }

@@ -9,5 +9,7 @@ configure({ adapter: new Adapter() });
 
 it('should render the ProductsWrapper component', () => {
   const productsWrapper = shallow(<ProductsWrapper data={products} />);
-  expect(productsWrapper.find('.productsWrapperComponent').exists()).toEqual(true);
+  expect(productsWrapper.find('.productsWrapperComponent').exists()).toEqual(
+    true
+  );
 });
