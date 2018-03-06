@@ -16,13 +16,10 @@ body {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
   background-color: #bbb;
+  border-top: 10px solid #6c757d;
+  border-bottom: 1px solid #6c757d;
   padding: 20px;
   color: white;
   text-align: left;
