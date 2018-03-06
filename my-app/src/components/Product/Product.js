@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Product.css';
 
-export default class ProductsWrapper extends Component {
+export default class Product extends Component {
   static propTypes = {
     productDetails: PropTypes.object,
+    title: PropTypes.string,
   };
 
   _createImage = productDetails => {
@@ -18,6 +19,7 @@ export default class ProductsWrapper extends Component {
   render() {
     return (
       <div className="product">
+        <h2>{this.props.title}</h2>
         {this._createImage(this.props.productDetails)}
         <p className="productTitle">
           {this.props.productDetails.make} {this.props.productDetails.model}

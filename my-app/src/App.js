@@ -15,7 +15,7 @@ export default class App extends Component {
           </header>
           <main>
             <BrowserRouter>
-              <Route exact path="/" component={ProductWrapper} />
+              <Route exact path="/products" component={ProductWrapper} />
             </BrowserRouter>
           </main>
         </div>

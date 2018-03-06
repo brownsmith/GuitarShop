@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './ProductsWrapper.css';
-import Product from '../Product/Product.js';
+import Product from '../../containers/Product/Product.js';
 
 export default class ProductsWrapper extends Component {
   static propTypes = {
