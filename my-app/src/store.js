@@ -1,18 +1,18 @@
-import { createStore, applyMiddleware, compose } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux';
 import createHistory from 'history/createBrowserHistory';
-import rootReducer from './modules'
+import rootReducer from './modules';
 
 export const history = createHistory();
 
-const initialState = {}
-const enhancers = []
-const middleware = []
+const initialState = {};
+const enhancers = [];
+const middleware = [];
 
 if (process.env.NODE_ENV === 'development') {
-  const devToolsExtension = window.devToolsExtension
+  const devToolsExtension = window.devToolsExtension;
 
   if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension())
+    enhancers.push(devToolsExtension());
   }
 }
 
@@ -22,9 +22,9 @@ const store = createStore(
   rootReducer,
   initialState,
   composedEnhancers
-)
+);
 
-export default store
+export default store;
 
 // Notes on createStore:
 // https://redux.js.org/api-reference/createstore

@@ -30,7 +30,7 @@ export default class Product extends Component {
         <p className="price">
           {this.props.productDetails.price}
         </p>
-        <button onClick={() => this._addToCart(this.props.productDetails.spec)}>Add to Cart</button>
+        <button className="button" onClick={() => this._addToCart(this.props.productDetails.spec)}>Add to Cart</button>
       </div>
     );
   }
