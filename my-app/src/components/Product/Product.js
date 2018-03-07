@@ -18,6 +18,7 @@ export default class Product extends Component {
   };
 
   _addToCart = spec => {
+    // dispatch an action to add to the trolley
     console.log('added ' + spec.name + ' to cart');
   };
 
