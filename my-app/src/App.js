@@ -11,7 +11,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <div className="App">
-          <header className="App-header">
+          <header className="header">
             <h1 className="App-title">The Guitar Store</h1>
           </header>
           <main>
