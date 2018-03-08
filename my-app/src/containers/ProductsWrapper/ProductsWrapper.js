@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 export default withRouter(
   connect(state => {
     return {
-      data: state.products.products,
+      data: state.appStore.products,
     };
   })(ProductsWrapper)
 );

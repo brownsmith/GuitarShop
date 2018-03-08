@@ -6,6 +6,7 @@ export default class Product extends Component {
   static propTypes = {
     productDetails: PropTypes.object,
     title: PropTypes.string,
+    addToCart: PropTypes.func,
   };
 
   _createImage = productDetails => {
@@ -17,9 +18,10 @@ export default class Product extends Component {
     );
   };
 
-  _addToCart = spec => {
-    // dispatch an action to add to the trolley
-    console.log('added ' + spec.name + ' to cart');
+  _addToCart = productDetails => {
+    // console.log(productDetails);
+    this.props.addToCart(productDetails);
+    console.log('[LOG] added ' + productDetails.spec.name + ' to cart');
   };
 
   render() {
@@ -34,7 +36,7 @@ export default class Product extends Component {
         <p className="price">{this.props.productDetails.price}</p>
         <button
           className="button"
-          onClick={() => this._addToCart(this.props.productDetails.spec)}
+          onClick={() => this._addToCart(this.props.productDetails)}
         >
           Add to Cart
         </button>
