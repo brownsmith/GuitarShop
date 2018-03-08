@@ -21,9 +21,7 @@ const appStoreReducer = (state = initialState, action = {}) => {
     case ADD_TO_CART:
       return {
         ...state,
-        trolley: {
-          itemPrice: action.details.price, // create array of prices and add items
-        },
+        trolley: [...state.trolley, action.details],
       };
     default:
       return state;

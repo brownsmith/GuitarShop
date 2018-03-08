@@ -19,7 +19,6 @@ export default class Product extends Component {
   };
 
   _addToCart = productDetails => {
-    // console.log(productDetails);
     this.props.addToCart(productDetails);
     console.log('[LOG] added ' + productDetails.spec.name + ' to cart');
   };
