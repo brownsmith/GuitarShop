@@ -1,13 +1,10 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
-import products from '../api/products.json';
+import { routerReducer as routing } from 'react-router-redux';
+import productData from '../api/products.json';
 
 export const ADD_TO_CART = 'guitarShop/ADD_TO_CART';
 
-const initialState = {
-  products,
-  trolley: {},
-};
+const initialState = [];
 
 export function addProductToCart(productDetails) {
   return {
@@ -16,19 +13,21 @@ export function addProductToCart(productDetails) {
   };
 }
 
-const appStoreReducer = (state = initialState, action = {}) => {
+const products = (state = [], action = {}) => {
+  return productData;
+};
+
+const trolley = (state = initialState, action = {}) => {
   switch (action.type) {
     case ADD_TO_CART:
-      return {
-        ...state,
-        trolley: [...state.trolley, action.details],
-      };
+      return [...state, action.details];
     default:
       return state;
   }
 };
 
 export default combineReducers({
-  routing: routerReducer,
-  appStore: appStoreReducer,
+  routing,
+  products,
+  trolley,
 });
