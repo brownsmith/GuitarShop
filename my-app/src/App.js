@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import './App.css';
 import ProductWrapper from './containers/ProductsWrapper/ProductsWrapper';
+import Trolley from './containers/Trolley/Trolley';
 import { Footer } from './components/Footer/Footer';
 
 export default class App extends Component {
@@ -13,6 +14,7 @@ export default class App extends Component {
         <div className="App">
           <header className="header">
             <h1 className="App-title">The Guitar Store</h1>
+            <Trolley />
           </header>
           <main>
             <BrowserRouter>
