@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import './App.css';
@@ -17,9 +17,10 @@ export default class App extends Component {
             <Trolley />
           </header>
           <main>
-            <BrowserRouter>
+            <Switch>
               <Route exact path="/products" component={ProductWrapper} />
-            </BrowserRouter>
+              <Route exact path="/trolley" component={Trolley} />
+            </Switch>
           </main>
           <Footer />
         </div>
