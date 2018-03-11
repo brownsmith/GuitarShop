@@ -7,7 +7,24 @@ export default class Trolley extends Component {
     trolleyItems: PropTypes.array,
   };
 
+  _getTrolleyItemsLength = trolleyItems => {
+    if (trolleyItems.length) {
+      return trolleyItems.length > 1
+        ? trolleyItems.length + ' items'
+        : '1 item';
+    } else {
+      return '0 items';
+    }
+  };
+
   render() {
-    return <div className="trolley">Trolley</div>;
+    return (
+      <div className="trolley">
+        <span>
+          You have {this._getTrolleyItemsLength(this.props.trolleyItems)} in
+          your Trolley
+        </span>
+      </div>
+    );
   }
 }
