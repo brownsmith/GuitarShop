@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import './Trolley.css';
 
 export default class Trolley extends Component {
@@ -25,7 +25,9 @@ export default class Trolley extends Component {
           You have {this._getTrolleyItemsLength(this.props.trolleyItems)} in
           your Trolley
         </span>
-        <Link to={{ pathname: '/trolley' }}>View Trolley</Link>
+        <BrowserRouter>
+          <Link to={{ pathname: '/trolley' }}>View Trolley</Link>
+        </BrowserRouter>
       </div>
     );
   }

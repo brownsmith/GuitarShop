@@ -17,10 +17,12 @@ export default class App extends Component {
             <Trolley />
           </header>
           <main>
-            <Switch>
-              <Route exact path="/products" component={ProductWrapper} />
-              <Route exact path="/trolley" component={Trolley} />
-            </Switch>
+            <BrowserRouter>
+              <Switch>
+                <Route exact path="/products" component={ProductWrapper} />
+                <Route exact path="/trolley" component={Trolley} />
+              </Switch>
+            </BrowserRouter>
           </main>
           <Footer />
         </div>
