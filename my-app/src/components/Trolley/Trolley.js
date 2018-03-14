@@ -18,12 +18,26 @@ export default class Trolley extends Component {
     }
   };
 
+  _getTrolleyPrice = trolleyItems => {
+    let newItemPrice;
+    let sum = 0;
+    let total = 0;
+    trolleyItems.forEach(item => {
+      if (item.price.charAt(0) === '£') {
+        newItemPrice = parseInt(item.price.substr(1), 10);
+      }
+      total = sum += newItemPrice;
+    });
+    return '£' + total;
+  };
+
   render() {
     return (
       <div className="trolley">
         <span>
           You have {this._getTrolleyItemsLength(this.props.trolleyItems)} in
-          your Trolley
+          your Trolley, totalling:{' '}
+          {this._getTrolleyPrice(this.props.trolleyItems)}
         </span>
         <BrowserRouter>
           <Link to={{ pathname: '/trolley' }}>View Trolley</Link>

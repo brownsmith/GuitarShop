@@ -7,19 +7,21 @@
       "name": "3 Tone Strat",
       "image": "3tone-strat.jpg",
       "neck": "Rosewood",
-      "description": "The Fender Professional Strat is one of those guitars that needs no introduction. It's got the classic look and sound that can be heard on countless records since the 50s!"
+      "description":
+        "The Fender Professional Strat is one of those guitars that needs no introduction. It's got the classic look and sound that can be heard on countless records since the 50s!"
     }
   },
   {
     "make": "Fender",
     "model": "Stratocaster",
-    "price": "£1019",
+    "price": "£899",
     "spec": {
       "name": "Black Strat",
       "image": "black-strat.jpg",
       "neck": "Rosewood",
       "body": "Black",
-      "description": "With V-Mod pickups, a fantastic fret design that makes bending a breeze and a comfortable tapered neck for even better playing comfort."
+      "description":
+        "With V-Mod pickups, a fantastic fret design that makes bending a breeze and a comfortable tapered neck for even better playing comfort."
     }
   },
   {
@@ -31,7 +33,8 @@
       "image": "olympic-white-strat.jpg",
       "neck": "Rosewood",
       "body": "Olympic white",
-      "description": "The Rosewood fretboard also gives you a bit more warmth and depth of tone than Maple would."
+      "description":
+        "The Rosewood fretboard also gives you a bit more warmth and depth of tone than Maple would."
     }
   },
   {
@@ -43,7 +46,8 @@
       "image": "olive-maple-strat.jpg",
       "neck": "Rosewood",
       "body": "Olive green",
-      "description": "The V-mod pickups have each been voiced for their position in the guitar rather than the same pickup put into each position as they were before."
+      "description":
+        "The V-mod pickups have each been voiced for their position in the guitar rather than the same pickup put into each position as they were before."
     }
   },
   {
@@ -55,19 +59,21 @@
       "image": "olympic-white-maple.jpg",
       "neck": "Rosewood",
       "body": "Olympic white",
-      "description": "The American Professional range has replaced the American Standards. Made in America with high-end hardware and each one comes with an Elite hardshell case."
+      "description":
+        "The American Professional range has replaced the American Standards. Made in America with high-end hardware and each one comes with an Elite hardshell case."
     }
   },
   {
     "make": "Fender",
     "model": "Stratocaster",
-    "price": "£1129",
+    "price": "£1329",
     "spec": {
       "name": "Sienna Burst Strat",
       "image": "sienna-burst-strat.jpg",
       "neck": "Rosewood",
       "body": "Sienna burst",
-      "description": "The American professional models also have the Treble Bleed Circuit which keeps the trebles pronounced, even when turning the volume down."
+      "description":
+        "The American professional models also have the Treble Bleed Circuit which keeps the trebles pronounced, even when turning the volume down."
     }
   }
 ]
