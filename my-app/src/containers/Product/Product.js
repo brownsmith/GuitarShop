@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Product from '../../components/Product/Product.js';
 import { withRouter } from 'react-router-dom';
-import { ADD_TO_CART } from '../../modules/reducers/trolley.js';
+import { ADD_TO_CART } from '../../modules/actions/trolley.js';
 import { addProductToCart } from '../../modules/actions/trolley.js';
 
 const mapDispatchToProps = dispatch => {

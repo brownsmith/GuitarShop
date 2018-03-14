@@ -1,6 +1,6 @@
-const initialState = [];
+import { ADD_TO_CART } from '../actions/trolley.js';
 
-export const ADD_TO_CART = 'guitarShop/ADD_TO_CART';
+const initialState = [];
 
 export const trolley = (state = initialState, action = {}) => {
   switch (action.type) {

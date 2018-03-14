@@ -1,4 +1,4 @@
-import { ADD_TO_CART } from '../reducers/trolley.js';
+export const ADD_TO_CART = 'guitarShop/ADD_TO_CART';
 
 export function addProductToCart(productDetails) {
   return {
