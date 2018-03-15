@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './store';
+import store from '../../store';
 import './App.css';
-import ProductWrapper from './containers/ProductsWrapper/ProductsWrapper';
-import Trolley from './containers/Trolley/Trolley';
-import { Footer } from './components/Footer/Footer';
+import ProductWrapper from '../../containers/ProductsWrapper/ProductsWrapper';
+import Trolley from '../../containers/Trolley/Trolley';
+import { Footer } from '../../components/Footer/Footer';
 
 export default class App extends Component {
   render() {
