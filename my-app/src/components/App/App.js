@@ -7,7 +7,7 @@ import ProductWrapper from '../../containers/ProductsWrapper/ProductsWrapper';
 import Trolley from '../../containers/Trolley/Trolley';
 import Footer from '../../components/Footer/Footer';
 import HomePage from '../../components/HomePage/HomePage';
-import { Link } from 'react-router-dom';
+import Navigation from '../../components/Navigation/Navigation';
 
 export default class App extends Component {
   render() {
@@ -18,16 +18,7 @@ export default class App extends Component {
             <header className="header">
               <h1 className="App-title">The Guitar Store</h1>
               <Trolley />
-              <nav>
-                <ul className="navigation">
-                  <li>
-                    <Link to={{ pathname: '/trolley' }}>View Trolley</Link>
-                  </li>
-                  <li>
-                    <Link to={{ pathname: '/products' }}>View Products</Link>
-                  </li>
-                </ul>
-              </nav>
+              <Navigation />
             </header>
             <main>
               <Route exact path="/" component={HomePage} />
