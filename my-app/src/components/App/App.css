@@ -13,8 +13,7 @@
 }
 
 body {
-  background-image: url('../../images/texture.png');
-  background-repeat: repeat;
+  background-color: #ddd;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -26,14 +25,12 @@ body {
 
 .App {
   font-family: 'RobotoCondensed';
-  padding-top: 135px;
+  padding-top: 100px;
   text-align: center;
 }
 
 .header {
-  background-image: url('../../images/texture-dark.png');
-  background-repeat: repeat;
-  font-family: 'Stratounlinked';
+  background-color: #aaa;
   border-bottom: 1px solid #6c757d;
   padding: 20px;
   position: fixed;
