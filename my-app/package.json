@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/brownsmith/GuitarShop/",
+  "homepage": "https://github.com/brownsmith/GuitarShop/my-app",
   "dependencies": {
     "assert": "^1.4.1",
     "history": "^4.7.2",
