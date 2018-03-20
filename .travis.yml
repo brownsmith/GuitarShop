@@ -6,6 +6,7 @@ cache:
   - my-app/node_modules
 script:
   - cd ./my-app
+  - yarn
   - yarn test
 deploy:
   provider: pages
