@@ -3,11 +3,9 @@ node_js:
   - "stable"
 cache:
   directories:
-  - my-app/
   - my-app/node_modules
 script:
-  - cd my-app/
-  - yarn test
+  - my-app/yarn test
 deploy:
   provider: pages
   skip_cleanup: true
