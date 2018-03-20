@@ -6,6 +6,9 @@
 # GuitarShop
 Dummy ecommerce website built using React
 
+## Pre-requisites:
+An up-to-date version of [Node](https://nodejs.org/en/) is recommended
+
 ## To run the app:
 
 ```sh
