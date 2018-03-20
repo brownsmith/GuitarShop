@@ -5,7 +5,8 @@ cache:
   directories:
   - my-app/node_modules
 script:
-  - my-app/yarn test
+  - cd ./my-app
+  - yarn test
 deploy:
   provider: pages
   skip_cleanup: true
