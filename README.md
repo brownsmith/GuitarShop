@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brownsmith/GuitarShop.svg?branch=master)](https://travis-ci.org/brownsmith/GuitarShop)
+
 # GuitarShop
 Dummy ecommerce website built using React
 
