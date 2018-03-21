@@ -7,7 +7,7 @@
 Dummy ecommerce website built using React
 
 ## Pre-requisites:
-An up-to-date version of [Node](https://nodejs.org/en/) is recommended
+An up-to-date version of [Node](https://nodejs.org/en/) >= version 6
 
 ## To run the app:
 
