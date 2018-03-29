@@ -7,6 +7,7 @@ export default class ProductsWrapper extends Component {
   static propTypes = {
     fetchProducts: PropTypes.func,
     data: PropTypes.array,
+    loading: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -24,7 +25,10 @@ export default class ProductsWrapper extends Component {
   render() {
     return (
       <div className="productsWrapperComponent">
-        <div className="productsWrapper">{this._renderProducts()}</div>
+        <div className="productsWrapper">
+          {this.props.loading && <h3>LOADING!</h3>}
+          {!this.props.loading && this._renderProducts()}
+        </div>
       </div>
     );
   }
