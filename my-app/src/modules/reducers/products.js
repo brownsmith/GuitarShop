@@ -1,5 +1,23 @@
-import productData from '../../api/products.json';
+import { RECEIVE_PRODUCTS, REQUEST_PRODUCTS } from '../actions/products.js';
 
-export const products = (state = [], action = {}) => {
-  return productData;
+const initialState = {
+  loading: false,
+};
+
+export const products = (state = initialState, action = {}) => {
+  switch (action.type) {
+    case REQUEST_PRODUCTS:
+      return {
+        ...state,
+        loading: true,
+      };
+    case RECEIVE_PRODUCTS:
+      return {
+        ...state,
+        loading: false,
+        products: action.products,
+      };
+    default:
+      return state;
+  }
 };

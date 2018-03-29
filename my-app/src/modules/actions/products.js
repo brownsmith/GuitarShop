@@ -1,8 +1,26 @@
-export const FETCH_PRODUCTS = 'guitarShop/FETCH_PRODUCTS';
+export const RECEIVE_PRODUCTS = 'guitarShop/RECEIVE_PRODUCTS';
+export const REQUEST_PRODUCTS = 'guitarShop/REQUEST_PRODUCTS';
 
-export function fetchProducts(productCatalog) {
+export const fetchProducts = () => {
+  return function(dispatch) {
+    dispatch(requestProducts());
+    return fetch('http://demo2872766.mockable.io/products')
+      .then(response => response.json())
+      .then(json => dispatch(receiveProducts(json)));
+  };
+};
+
+export function requestProducts() {
   return {
-    type: FETCH_PRODUCTS,
-    details: productDetails,
+    type: REQUEST_PRODUCTS,
   };
 }
+
+export function receiveProducts(json) {
+  return {
+    type: RECEIVE_PRODUCTS,
+    products: json,
+  };
+}
+
+// Actions MUST be dispatched!!

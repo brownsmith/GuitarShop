@@ -5,13 +5,20 @@ import Product from '../../containers/Product/Product.js';
 
 export default class ProductsWrapper extends Component {
   static propTypes = {
+    fetchProducts: PropTypes.func,
     data: PropTypes.array,
   };
 
+  componentDidMount() {
+    this.props.fetchProducts();
+  }
+
   _renderProducts = () => {
-    return this.props.data.map((product, key) => (
-      <Product productDetails={product} key={key} />
-    ));
+    if (this.props.data) {
+      return this.props.data.map((product, key) => (
+        <Product productDetails={product} key={key} />
+      ));
+    }
   };
 
   render() {
