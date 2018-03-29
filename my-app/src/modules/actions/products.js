@@ -13,6 +13,7 @@ export const fetchProducts = () => {
 export function requestProducts() {
   return {
     type: REQUEST_PRODUCTS,
+    loading: true,
   };
 }
 
@@ -20,6 +21,7 @@ export function receiveProducts(json) {
   return {
     type: RECEIVE_PRODUCTS,
     products: json,
+    loading: false,
   };
 }
 

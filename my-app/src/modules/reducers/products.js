@@ -2,6 +2,7 @@ import { RECEIVE_PRODUCTS, REQUEST_PRODUCTS } from '../actions/products.js';
 
 const initialState = {
   loading: false,
+  products: [],
 };
 
 export const products = (state = initialState, action = {}) => {
