@@ -9,16 +9,6 @@ export default class Product extends Component {
     addToCart: PropTypes.func,
   };
 
-  componentDidMount() {
-    // fetch('http://demo2872766.mockable.io/products')
-    //   .then(results => {
-    //     return results.json();
-    //   })
-    //   .then(data => {
-    //     console.log('data', data);
-    //   });
-  }
-
   _createImage = productDetails => {
     return (
       <img
