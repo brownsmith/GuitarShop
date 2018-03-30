@@ -26,7 +26,11 @@ export default class ProductsWrapper extends Component {
     return (
       <div className="productsWrapperComponent">
         <div className="productsWrapper">
-          {this.props.loading && <div className="loaderWrapper" />}
+          {this.props.loading && (
+            <div className="loaderWrapper">
+              <div className="loader" />
+            </div>
+          )}
           {!this.props.loading && this._renderProducts()}
         </div>
       </div>
