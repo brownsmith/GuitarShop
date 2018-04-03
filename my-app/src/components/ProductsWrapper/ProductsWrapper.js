@@ -17,7 +17,7 @@ export default class ProductsWrapper extends Component {
   _renderProducts = () => {
     if (this.props.data) {
       return this.props.data.map((product, key) => (
-        <Product productDetails={product} key={key} />
+        <Product productDetails={product} key={key} className={product} />
       ));
     }
   };
