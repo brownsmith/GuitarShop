@@ -18,4 +18,17 @@ describe('products reducer', () => {
     };
     expect(products(initialState, addToCart)).toEqual({ loading: true });
   });
+
+  it('should handle RECEIVE_PRODUCTS', () => {
+    const initialState = {};
+    const addToCart = {
+      type: RECEIVE_PRODUCTS,
+      loading: true,
+      products: [],
+    };
+    expect(products(initialState, addToCart)).toEqual({
+      loading: false,
+      products: [],
+    });
+  });
 });
