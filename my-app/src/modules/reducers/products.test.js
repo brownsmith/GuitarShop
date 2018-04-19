@@ -24,11 +24,11 @@ describe('products reducer', () => {
     const addToCart = {
       type: RECEIVE_PRODUCTS,
       loading: true,
-      products: [],
+      products: [{}, {}],
     };
     expect(products(initialState, addToCart)).toEqual({
       loading: false,
-      products: [],
+      products: [{}, {}],
     });
   });
 });
