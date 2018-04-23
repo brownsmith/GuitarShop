@@ -18,12 +18,17 @@ export default class Trolley extends Component {
     }
   };
 
+  _displayTrolleyContents = trolleyContents => {
+    console.log(trolleyContents);
+  };
+
   render() {
     return (
       <div className="trolley">
         <span className="innerTrolley">
           {this._getTrolleyItemsLength(this.props.trolleyItems)} in your
           Trolley, totalling: {this.props.trolleyTotal}
+          <div>{this._displayTrolleyContents(this.props.trolleyItems)}</div>
         </span>
       </div>
     );
