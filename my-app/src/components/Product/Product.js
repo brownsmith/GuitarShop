@@ -19,6 +19,14 @@ export default class Product extends Component {
     );
   };
 
+  _itemInTrolley = productId => {
+    return this.props.trolleyItems.find(
+      trolleyItem => trolleyItem.productId === productId
+    )
+      ? 'item in trolley'
+      : false;
+  };
+
   _addToCart = productDetails => {
     this.props.addToCart(productDetails);
     console.log('[LOG] added ' + productDetails.spec.name + ' to cart');
@@ -27,6 +35,7 @@ export default class Product extends Component {
   render() {
     return (
       <div className="product">
+        <p>lkl {this._itemInTrolley(this.props.productDetails.productId)}</p>
         <h2>{this.props.title}</h2>
         {this._createImage(this.props.productDetails)}
         <p className="productTitle">
