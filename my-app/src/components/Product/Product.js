@@ -22,9 +22,11 @@ export default class Product extends Component {
   _itemInTrolley = productId => {
     return this.props.trolleyItems.find(
       trolleyItem => trolleyItem.productId === productId
-    )
-      ? 'item in trolley'
-      : false;
+    ) ? (
+      <span className="addedToTrolley">Added to trolley</span>
+    ) : (
+      false
+    );
   };
 
   _addToCart = productDetails => {
@@ -35,7 +37,7 @@ export default class Product extends Component {
   render() {
     return (
       <div className="product">
-        <p>lkl {this._itemInTrolley(this.props.productDetails.productId)}</p>
+        {this._itemInTrolley(this.props.productDetails.productId)}
         <h2>{this.props.title}</h2>
         {this._createImage(this.props.productDetails)}
         <p className="productTitle">
