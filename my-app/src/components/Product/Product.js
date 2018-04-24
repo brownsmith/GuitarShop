@@ -7,6 +7,7 @@ export default class Product extends Component {
     productDetails: PropTypes.object,
     title: PropTypes.string,
     addToCart: PropTypes.func,
+    trolleyItems: PropTypes.array,
   };
 
   _createImage = productDetails => {

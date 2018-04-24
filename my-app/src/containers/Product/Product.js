@@ -15,6 +15,7 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
   return {
     title: getProductBrand(state),
+    trolleyItems: state.trolley,
   };
 };
 
