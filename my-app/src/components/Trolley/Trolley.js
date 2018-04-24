@@ -20,7 +20,6 @@ export default class Trolley extends Component {
 
   _displayTrolleyContents = trolleyContents => {
     console.log(trolleyContents);
-    return <p>trolley item</p>;
   };
 
   render() {
