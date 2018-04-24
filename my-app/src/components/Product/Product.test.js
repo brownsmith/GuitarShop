@@ -13,8 +13,16 @@ describe('Product component', () => {
         image: 'black-strat.jpg',
       },
     };
+    const trolleyItems = [
+      {
+        productId: '1001',
+      },
+    ];
     const div = document.createElement('div');
-    ReactDOM.render(<Product productDetails={productDetails} />, div);
+    ReactDOM.render(
+      <Product productDetails={productDetails} trolleyItems={trolleyItems} />,
+      div
+    );
     ReactDOM.unmountComponentAtNode(div);
   });
 });
