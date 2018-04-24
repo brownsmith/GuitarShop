@@ -8,6 +8,7 @@ import Trolley from '../../containers/Trolley/Trolley';
 import Footer from '../../components/Footer/Footer';
 import HomePage from '../../components/HomePage/HomePage';
 import Navigation from '../../components/Navigation/Navigation';
+import TrolleyPage from '../../containers/TrolleyPage/TrolleyPage';
 
 export default class App extends Component {
   render() {
@@ -23,7 +24,7 @@ export default class App extends Component {
             <main>
               <Route exact path="/" component={HomePage} />
               <Route path="/products" component={ProductWrapper} />
-              <Route path="/trolley" component={Trolley} />
+              <Route path="/trolley" component={TrolleyPage} />
             </main>
             <Footer />
           </div>
