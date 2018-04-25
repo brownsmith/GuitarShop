@@ -37,6 +37,7 @@ body {
   top: 0;
   color: #ddd;
   width: calc(100% - 40px);
+  z-index: 2;
 }
 
 img,
