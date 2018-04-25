@@ -37,11 +37,5 @@ body {
   top: 0;
   color: #ddd;
   width: calc(100% - 40px);
-  z-index: 2;
-}
-
-img,
-h1,
-h2,
-.productTitle {
+  /* z-index: 2; */
 }
