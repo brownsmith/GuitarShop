@@ -6,3 +6,7 @@ export const getTrolleyTotalPrice = state => {
     }, 0)
   );
 };
+
+export const getTrolleyLength = state => {
+  return state.trolley.length;
+};
