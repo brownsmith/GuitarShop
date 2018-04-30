@@ -4,13 +4,17 @@ import './TrolleyPage.css';
 
 export default class TrolleyPage extends Component {
   static propTypes = {
-    trolleyProducts: PropTypes.array,
+    trolleyItems: PropTypes.array,
+  };
+
+  _getTrolleyLength = () => {
+    return this.props.trolleyItems.length;
   };
 
   render() {
     return (
       <div className="trolleyPage">
-        <h1>trolley page</h1>
+        <h1>You have {this._getTrolleyLength()} items in your trolley</h1>
       </div>
     );
   }
