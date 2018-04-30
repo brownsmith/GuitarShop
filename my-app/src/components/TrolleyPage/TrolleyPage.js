@@ -11,6 +11,7 @@ export default class TrolleyPage extends Component {
     return (
       <div className="trolleyPage">
         <h1>You have {this.props.trolleyItemsTotal} items in your trolley</h1>
+        <p>Display trolley items</p>
       </div>
     );
   }
