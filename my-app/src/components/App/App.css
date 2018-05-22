@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'GuitarRumble';
+  src: url('../../fonts/GuitarRumble.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #ddd;
   margin: 0;
@@ -20,7 +27,12 @@ body {
 }
 
 .App-title {
-  font-size: 1em;
+  font-family: 'GuitarRumble';
+  font-size: 5em;
+  margin: 0;
+  color: #555;
+  letter-spacing: -6px;
+  text-shadow: 1px 1px #fff;
 }
 
 .App {
