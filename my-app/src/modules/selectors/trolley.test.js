@@ -1,5 +1,5 @@
 import expect from 'expect';
-import { getTrolleyTotalPrice } from './trolley';
+import { getTrolleyTotalPrice, getTrolleyLength } from './trolley';
 
 describe('Trolley selectors', () => {
   it('should add up the items in the trolley and return a total', () => {
@@ -19,5 +19,14 @@ describe('Trolley selectors', () => {
     const result = getTrolleyTotalPrice(state);
 
     expect(result).toEqual('£30');
+  });
+
+  it('should return the lenght of the trolley', () => {
+    const state = {
+      trolley: [{}, {}, {}, {}],
+    };
+    const result = getTrolleyLength(state);
+
+    expect(result).toEqual(4);
   });
 });
