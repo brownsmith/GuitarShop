@@ -37,6 +37,7 @@ export default class Product extends Component {
   render() {
     return (
       <div className="product">
+        {this.props.productDetails.bestSeller && <span>Best Seller!</span>}
         {this._itemInTrolley(this.props.productDetails.productId)}
         <h2>{this.props.title}</h2>
         {this._createImage(this.props.productDetails)}
