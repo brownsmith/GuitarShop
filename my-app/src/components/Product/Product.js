@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import BestSeller from './BestSeller.js';
 import './Product.css';
 
 export default class Product extends Component {
@@ -37,7 +38,7 @@ export default class Product extends Component {
   render() {
     return (
       <div className="product">
-        {this.props.productDetails.bestSeller && <span>Best Seller!</span>}
+        {this.props.productDetails.bestSeller && <BestSeller />}
         {this._itemInTrolley(this.props.productDetails.productId)}
         <h2>{this.props.title}</h2>
         {this._createImage(this.props.productDetails)}
