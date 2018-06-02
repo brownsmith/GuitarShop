@@ -8,6 +8,7 @@ export default class ProductsWrapper extends Component {
     fetchProducts: PropTypes.func,
     data: PropTypes.array,
     loading: PropTypes.bool,
+    highToLow: PropTypes.func,
   };
 
   componentDidMount() {
@@ -25,6 +26,7 @@ export default class ProductsWrapper extends Component {
   render() {
     return (
       <div className="productsWrapperComponent">
+        <div onClick={() => this.props.highToLow()}>High to Low</div>
         <div className="productsWrapper">
           {this.props.loading && (
             <div className="loaderWrapper">
