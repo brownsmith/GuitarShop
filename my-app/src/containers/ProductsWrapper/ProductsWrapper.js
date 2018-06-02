@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
 import ProductsWrapper from '../../components/ProductsWrapper/ProductsWrapper';
 import { withRouter } from 'react-router-dom';
-import { fetchProducts } from '../../modules/actions/products';
-import { RECEIVE_PRODUCTS } from '../../modules/actions/products';
+import {
+  fetchProducts,
+  RECEIVE_PRODUCTS,
+} from '../../modules/actions/products';
 import { orderProductsHighToLow } from '../../modules/selectors/product';
 
 const mapDispatchToProps = dispatch => {
