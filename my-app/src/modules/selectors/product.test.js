@@ -6,4 +6,39 @@ describe('Product selectors', () => {
     const result = getProductBrand();
     expect(result).toEqual('Fender');
   });
+
+  it('should re-order the products by price - high to low', () => {
+    // stub click for reorder button
+    const state = {
+      products: {
+        products: [
+          {
+            price: '£10',
+          },
+          {
+            price: '£20',
+          },
+          {
+            price: '£30',
+          },
+        ],
+      },
+    };
+    const result = orderProductsHighToLow(state);
+    expect(result).toEqual({
+      products: {
+        products: [
+          {
+            price: '£30',
+          },
+          {
+            price: '£20',
+          },
+          {
+            price: '£10',
+          },
+        ],
+      },
+    });
+  });
 });
