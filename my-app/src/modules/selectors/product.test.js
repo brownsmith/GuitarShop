@@ -1,5 +1,5 @@
 import expect from 'expect';
-import { getProductBrand } from './product';
+import { getProductBrand, orderProductsHighToLow } from './product';
 
 describe('Product selectors', () => {
   it('should return the brand name', () => {
