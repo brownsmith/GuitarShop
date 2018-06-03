@@ -8,22 +8,19 @@ describe('Product selectors', () => {
   });
 
   it('should re-order the products by price - high to low', () => {
-    const state = {
-      products: {
-        products: [
-          {
-            price: '£10',
-          },
-          {
-            price: '£20',
-          },
-          {
-            price: '£30',
-          },
-        ],
+    const products = [
+      {
+        price: '£10',
       },
-    };
-    const result = orderProductsHighToLow(state);
+      {
+        price: '£20',
+      },
+      {
+        price: '£30',
+      },
+    ];
+
+    const result = orderProductsHighToLow(products);
     expect(result).toEqual([
       {
         price: '£30',
