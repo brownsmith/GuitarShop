@@ -8,7 +8,6 @@ describe('Product selectors', () => {
   });
 
   it('should re-order the products by price - high to low', () => {
-    // stub click for reorder button
     const state = {
       products: {
         products: [

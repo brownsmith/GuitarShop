@@ -4,12 +4,13 @@ import { withRouter } from 'react-router-dom';
 import {
   fetchProducts,
   RECEIVE_PRODUCTS,
+  orderProducts,
 } from '../../modules/actions/products';
-import { orderProductsHighToLow } from '../../modules/selectors/product';
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, state) => {
   return {
     fetchProducts: () => dispatch(fetchProducts(RECEIVE_PRODUCTS)),
+    orderProducts: state => dispatch(orderProducts(state)),
   };
 };
 
@@ -17,7 +18,6 @@ const mapStateToProps = state => {
   return {
     data: state.products.products,
     loading: state.products.loading,
-    highToLow: () => orderProductsHighToLow(state),
   };
 };
 

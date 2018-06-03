@@ -1,5 +1,7 @@
+import { orderProductsHighToLow } from '../../modules/selectors/product';
 export const RECEIVE_PRODUCTS = 'guitarShop/RECEIVE_PRODUCTS';
 export const REQUEST_PRODUCTS = 'guitarShop/REQUEST_PRODUCTS';
+export const ORDER_PRODUCTS = 'guitarShop/ORDER_PRODUCTS';
 
 export const fetchProducts = () => {
   return function(dispatch) {
@@ -9,6 +11,13 @@ export const fetchProducts = () => {
       .then(json => dispatch(receiveProducts(json)));
   };
 };
+
+export function orderProducts(state) {
+  return {
+    type: ORDER_PRODUCTS,
+    products: orderProductsHighToLow(state),
+  };
+}
 
 export function requestProducts() {
   return {
