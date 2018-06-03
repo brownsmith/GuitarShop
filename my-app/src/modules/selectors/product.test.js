@@ -25,20 +25,16 @@ describe('Product selectors', () => {
       },
     };
     const result = orderProductsHighToLow(state);
-    expect(result).toEqual({
-      products: {
-        products: [
-          {
-            price: '£30',
-          },
-          {
-            price: '£20',
-          },
-          {
-            price: '£10',
-          },
-        ],
+    expect(result).toEqual([
+      {
+        price: '£30',
       },
-    });
+      {
+        price: '£20',
+      },
+      {
+        price: '£10',
+      },
+    ]);
   });
 });

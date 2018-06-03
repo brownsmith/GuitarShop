@@ -3,24 +3,14 @@ export const getProductBrand = state => {
 };
 
 export const orderProductsHighToLow = state => {
-  return {
-    products: {
-      products: [
-        {
-          price: '£30',
-        },
-        {
-          price: '£20',
-        },
-        {
-          price: '£10',
-        },
-      ],
-    },
-  };
-  // return state.products.products.map(product => {
-  //   const priceWithout = product.price.toString().replace(/\u00A3/g, '', '');
-  //   // return console.log(priceWithout);
-  //   return
-  // });
+  function compareNumbers(a, b) {
+    return (
+      b.price.toString().replace(/\u00A3/g, '', '') -
+      a.price.toString().replace(/\u00A3/g, '', '')
+    );
+  }
+
+  console.log('after', state.products.products.sort(compareNumbers));
+
+  return state.products.products.sort(compareNumbers);
 };
