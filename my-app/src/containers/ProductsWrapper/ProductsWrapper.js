@@ -6,6 +6,7 @@ import {
   RECEIVE_PRODUCTS,
   orderProducts,
 } from '../../modules/actions/products';
+import { orderProductsHighToLow } from '../../modules/selectors/product';
 
 const mapDispatchToProps = (dispatch, state) => {
   return {

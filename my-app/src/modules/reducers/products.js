@@ -1,4 +1,8 @@
-import { RECEIVE_PRODUCTS, REQUEST_PRODUCTS } from '../actions/products.js';
+import {
+  RECEIVE_PRODUCTS,
+  REQUEST_PRODUCTS,
+  ORDER_PRODUCTS,
+} from '../actions/products.js';
 
 const initialState = {
   loading: false,
@@ -16,6 +20,11 @@ export const products = (state = initialState, action = {}) => {
       return {
         ...state,
         loading: false,
+        products: action.products,
+      };
+    case ORDER_PRODUCTS:
+      return {
+        ...state,
         products: action.products,
       };
     default:
