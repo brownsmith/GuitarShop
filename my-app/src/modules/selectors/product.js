@@ -2,7 +2,7 @@ export const getProductBrand = state => {
   return 'Fender';
 };
 
-export const orderProductsHighToLow = products => {
+export const orderProductsHighToLow = data => {
   function compareNumbers(a, b) {
     return (
       b.price.toString().replace(/\u00A3/g, '', '') -
@@ -10,5 +10,7 @@ export const orderProductsHighToLow = products => {
     );
   }
 
-  return products.sort(compareNumbers);
+  data.sort(compareNumbers);
+
+  return data;
 };

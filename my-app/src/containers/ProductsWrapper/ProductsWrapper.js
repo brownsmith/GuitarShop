@@ -6,12 +6,12 @@ import {
   RECEIVE_PRODUCTS,
   orderProducts,
 } from '../../modules/actions/products';
-import { orderProductsHighToLow } from '../../modules/selectors/product';
+// import { orderProductsHighToLow } from '../../modules/selectors/product';
 
-const mapDispatchToProps = (dispatch, state) => {
+const mapDispatchToProps = dispatch => {
   return {
     fetchProducts: () => dispatch(fetchProducts(RECEIVE_PRODUCTS)),
-    orderProducts: state => dispatch(orderProducts(state)),
+    orderProducts: data => dispatch(orderProducts(data)),
   };
 };
 
@@ -19,6 +19,7 @@ const mapStateToProps = state => {
   return {
     data: state.products.products,
     loading: state.products.loading,
+    // orderProducts: data => orderProductsHighToLow(data),
   };
 };
 

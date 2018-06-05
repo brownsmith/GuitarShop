@@ -12,10 +12,11 @@ export const fetchProducts = () => {
   };
 };
 
-export function orderProducts(state) {
+export function orderProducts(data) {
   return {
     type: ORDER_PRODUCTS,
-    products: orderProductsHighToLow(state),
+    something: 'else',
+    products: [...orderProductsHighToLow(data)],
   };
 }
 
