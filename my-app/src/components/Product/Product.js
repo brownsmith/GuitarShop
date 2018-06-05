@@ -13,11 +13,10 @@ export default class Product extends Component {
 
   _createImage = productDetails => {
     return (
-      <p>test</p>
-      // <img
-      //   src={require('../../images/' + productDetails.spec.image)}
-      //   alt={productDetails.make + ' ' + productDetails.model}
-      // />
+      <img
+        src={require('../../images/' + productDetails.spec.image)}
+        alt={productDetails.make + ' ' + productDetails.model}
+      />
     );
   };
 

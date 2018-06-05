@@ -17,7 +17,7 @@ export default class App extends Component {
         <BrowserRouter>
           <div className="App">
             <header className="header">
-              {/* <h1 className="App-title">The Guitar Store</h1> */}
+              <h1 className="App-title">The Guitar Store</h1>
               <Trolley />
               <Navigation />
             </header>
