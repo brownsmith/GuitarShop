@@ -27,10 +27,16 @@ export default class ProductsWrapper extends Component {
     return (
       <div className="productsWrapperComponent">
         <div className="productSorting">
-          <button onClick={() => this.props.orderProducts(this.props.data)}>
+          <button
+            onClick={() => this.props.orderProducts(this.props.data)}
+            className="button"
+          >
             High to Low
           </button>
-          <button onClick={() => this.props.orderProducts(this.props.data)}>
+          <button
+            onClick={() => this.props.orderProducts(this.props.data)}
+            className="button"
+          >
             Low to High
           </button>
         </div>
