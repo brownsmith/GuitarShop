@@ -73,6 +73,10 @@
   padding: 20px;
 }
 
+.productSorting {
+  margin-top: 20px;
+}
+
 .button {
   background: #5188a5;
   background-image: linear-gradient(to bottom, #5188a5, #5188a5);
