@@ -15,7 +15,6 @@ export const fetchProducts = () => {
 export function orderProducts(data) {
   return {
     type: ORDER_PRODUCTS,
-    something: 'else',
     products: [...orderProductsHighToLow(data)],
   };
 }
