@@ -14,3 +14,5 @@ export const orderProductsHighToLow = data => {
 
   return data;
 };
+
+export const getProducts = state => state.products.products;

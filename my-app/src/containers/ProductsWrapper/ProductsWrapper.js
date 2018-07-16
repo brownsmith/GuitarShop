@@ -6,6 +6,7 @@ import {
   RECEIVE_PRODUCTS,
   orderProducts,
 } from '../../modules/actions/products';
+import { getProducts } from '../../modules/selectors/product';
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -16,7 +17,7 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
   return {
-    data: state.products.products,
+    data: getProducts(state),
     loading: state.products.loading,
   };
 };
