@@ -1,3 +1,6 @@
+export const getProducts = state => state.products.products;
+export const productsLoading = state => state.products.loading;
+
 export const getProductBrand = state => {
   return 'Fender';
 };
@@ -14,5 +17,3 @@ export const orderProductsHighToLow = data => {
 
   return data;
 };
-
-export const getProducts = state => state.products.products;
