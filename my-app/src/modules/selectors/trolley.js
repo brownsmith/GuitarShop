@@ -1,3 +1,5 @@
+export const getTrolley = state => state.trolley;
+
 export const getTrolleyTotalPrice = state => {
   return (
     '£' +
