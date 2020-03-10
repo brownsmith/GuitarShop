@@ -19,6 +19,7 @@ const mapStateToProps = state => {
   return {
     data: getProducts(state),
     loading: productsLoading(state),
+    hasError: state.products.error,
   };
 };
 
