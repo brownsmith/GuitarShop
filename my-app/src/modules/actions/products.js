@@ -6,7 +6,7 @@ export const ORDER_PRODUCTS = 'guitarShop/ORDER_PRODUCTS';
 export const fetchProducts = () => {
   return function(dispatch) {
     dispatch(requestProducts());
-    return fetch('http://demo2872766.mockable.io/products')
+    return fetch('http://demo1861791.mockable.io/products')
       .then(response => response.json())
       .then(json => dispatch(receiveProducts(json)));
   };
