@@ -1,54 +1,38 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
 import './ProductsWrapper.css';
 import Product from '../../containers/Product/Product.js';
 
-export default class ProductsWrapper extends Component {
-  static propTypes = {
-    fetchProducts: PropTypes.func,
-    data: PropTypes.array,
-    loading: PropTypes.bool,
-    orderProducts: PropTypes.func,
-  };
+function ProductsWrapper({ fetchProducts, data, loading, orderProducts }) {
+  useEffect(() => fetchProducts(), []);
 
-  componentDidMount() {
-    this.props.fetchProducts();
-  }
-
-  _renderProducts = () => {
-    if (this.props.data) {
-      return this.props.data.map((product, key) => (
+  const renderProducts = data => {
+    if (data) {
+      return data.map((product, key) => (
         <Product productDetails={product} key={key} className={product} />
       ));
     }
   };
 
-  render() {
-    return (
-      <div className="productsWrapperComponent">
-        <div className="productSorting">
-          <button
-            onClick={() => this.props.orderProducts(this.props.data)}
-            className="button"
-          >
-            High to Low
-          </button>
-          <button
-            onClick={() => this.props.orderProducts(this.props.data)}
-            className="button"
-          >
-            Low to High
-          </button>
-        </div>
-        <div className="productsWrapper">
-          {this.props.loading && (
-            <div className="loaderWrapper">
-              <div className="loader" />
-            </div>
-          )}
-          {!this.props.loading && this._renderProducts()}
-        </div>
+  return (
+    <div className="productsWrapperComponent">
+      <div className="productSorting">
+        <button onClick={() => orderProducts(data)} className="button">
+          High to Low
+        </button>
+        <button onClick={() => orderProducts(data)} className="button">
+          Low to High
+        </button>
       </div>
-    );
-  }
+      <div className="productsWrapper">
+        {loading && (
+          <div className="loaderWrapper">
+            <div className="loader" />
+          </div>
+        )}
+        {!loading && renderProducts(data)}
+      </div>
+    </div>
+  );
 }
+
+export default ProductsWrapper;
