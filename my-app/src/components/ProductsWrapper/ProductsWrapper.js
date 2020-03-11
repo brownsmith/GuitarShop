@@ -8,11 +8,16 @@ function ProductsWrapper({
   hasError,
   loading,
   orderProducts,
+  location,
 }) {
-  // useEffect(() => fetchProducts(), []);
-  useEffect(() => {
-    fetchProducts().then();
-  }, []);
+  useEffect(
+    () => {
+      fetchProducts().then();
+    },
+    [fetchProducts]
+  );
+
+  console.log('location', location);
 
   const renderProducts = data => {
     if (data) {
