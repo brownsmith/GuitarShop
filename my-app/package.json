@@ -8,6 +8,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
     "prettier": "^1.11.1",
+    "query-string": "^6.11.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^5.0.7",
@@ -15,7 +16,8 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "^3.0.1",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "use-query-params": "^0.6.0"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,scss,css}": [
