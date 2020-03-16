@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.5",
     "assert": "^1.4.1",
     "history": "^4.7.2",
     "husky": "^0.14.3",
