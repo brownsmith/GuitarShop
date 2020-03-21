@@ -15,8 +15,12 @@ describe('products reducer', () => {
     const addToCart = {
       type: REQUEST_PRODUCTS,
       loading: true,
+      error: false,
     };
-    expect(products(initialState, addToCart)).toEqual({ loading: true });
+    expect(products(initialState, addToCart)).toEqual({
+      loading: true,
+      error: false,
+    });
   });
 
   it('should handle RECEIVE_PRODUCTS', () => {
@@ -27,6 +31,7 @@ describe('products reducer', () => {
       products: [{}, {}],
     };
     expect(products(initialState, addToCart)).toEqual({
+      error: false,
       loading: false,
       products: [{}, {}],
     });
