@@ -17,8 +17,6 @@ function ProductsWrapper({
     [fetchProducts]
   );
 
-  console.log('location', location);
-
   const renderProducts = data => {
     if (data) {
       return data.map((product, key) => (
