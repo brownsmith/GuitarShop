@@ -2,31 +2,33 @@ import React, { useEffect } from 'react';
 import './ProductsWrapper.css';
 import Product from '../../containers/Product/Product.js';
 
-function ProductsWrapper({
+const renderProducts = data => {
+  if (data) {
+    return data.map((product, key) => (
+      <Product productDetails={product} key={key} className={product} />
+    ));
+  }
+};
+
+const ProductsWrapper = ({
   fetchProducts,
   data,
   hasError,
   loading,
   orderProducts,
-  location,
-}) {
+}) => {
   useEffect(
     () => {
-      fetchProducts().then();
+      fetchProducts();
     },
     [fetchProducts]
   );
 
-  const renderProducts = data => {
-    if (data) {
-      return data.map((product, key) => (
-        <Product productDetails={product} key={key} className={product} />
-      ));
-    }
-  };
-
   return (
-    <div className="productsWrapperComponent">
+    <div
+      className="productsWrapperComponent"
+      data-test="productsWrapperComponent"
+    >
       {hasError ? (
         <div className="productsWrapper">
           <h2>WHOOPSIE THE API DONE A ERROR</h2>
@@ -53,6 +55,6 @@ function ProductsWrapper({
       )}
     </div>
   );
-}
+};
 
 export default ProductsWrapper;
