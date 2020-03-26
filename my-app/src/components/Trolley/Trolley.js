@@ -1,4 +1,4 @@
-import React, { props } from 'react';
+import React from 'react';
 import './Trolley.css';
 
 const getTrolleyItemsLength = trolleyItems => {
@@ -13,17 +13,14 @@ const displayTrolleyContents = trolleyItems => {
   // console.log(trolleyContents);
 };
 
-const Trolley = props => {
-  const { trolleyItems, trolleyTotal } = props;
-  return (
-    <div className="trolley">
-      <span className="innerTrolley">
-        {getTrolleyItemsLength(trolleyItems)} in your Trolley, totalling:{' '}
-        {trolleyTotal}
-        <div>{displayTrolleyContents(trolleyItems)}</div>
-      </span>
-    </div>
-  );
-};
+const Trolley = ({ trolleyItems, trolleyTotal }) => (
+  <div className="trolley">
+    <span className="innerTrolley">
+      {getTrolleyItemsLength(trolleyItems)} in your Trolley, totalling:{' '}
+      {trolleyTotal}
+      <div>{displayTrolleyContents(trolleyItems)}</div>
+    </span>
+  </div>
+);
 
 export default Trolley;
