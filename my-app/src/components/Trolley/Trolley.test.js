@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Trolley from './Trolley';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 configure({ adapter: new Adapter() });
 
@@ -32,7 +32,7 @@ describe('Trolley component', () => {
   it('should describe the contents of the trolley and the total price', () => {
     const trolleyItems = [{}, {}];
     const trolleyTotal = '£1229';
-    const wrapper = mount(
+    const wrapper = shallow(
       <Trolley trolleyItems={trolleyItems} trolleyTotal={trolleyTotal} />
     );
     expect(wrapper.text()).toEqual('2 items in your Trolley, totalling: £1229');

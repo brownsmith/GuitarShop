@@ -13,7 +13,7 @@ const displayTrolleyContents = trolleyItems => {
   // console.log(trolleyContents);
 };
 
-const Trolley = () => {
+const Trolley = props => {
   const { trolleyItems, trolleyTotal } = props;
   return (
     <div className="trolley">
