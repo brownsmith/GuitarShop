@@ -1,36 +1,29 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { props } from 'react';
 import './Trolley.css';
 
-export default class Trolley extends Component {
-  static propTypes = {
-    trolleyItems: PropTypes.array,
-    trolleyTotal: PropTypes.string,
-  };
-
-  _getTrolleyItemsLength = trolleyItems => {
-    if (trolleyItems.length) {
-      return trolleyItems.length > 1
-        ? trolleyItems.length + ' items'
-        : '1 item';
-    } else {
-      return '0 items';
-    }
-  };
-
-  _displayTrolleyContents = trolleyContents => {
-    // console.log(trolleyContents);
-  };
-
-  render() {
-    return (
-      <div className="trolley">
-        <span className="innerTrolley">
-          {this._getTrolleyItemsLength(this.props.trolleyItems)} in your
-          Trolley, totalling: {this.props.trolleyTotal}
-          <div>{this._displayTrolleyContents(this.props.trolleyItems)}</div>
-        </span>
-      </div>
-    );
+const getTrolleyItemsLength = trolleyItems => {
+  if (trolleyItems.length) {
+    return trolleyItems.length > 1 ? trolleyItems.length + ' items' : '1 item';
+  } else {
+    return '0 items';
   }
-}
+};
+
+const displayTrolleyContents = trolleyItems => {
+  // console.log(trolleyContents);
+};
+
+const Trolley = props => {
+  const { trolleyItems, trolleyTotal } = props;
+  return (
+    <div className="trolley">
+      <span className="innerTrolley">
+        {getTrolleyItemsLength(trolleyItems)} in your Trolley, totalling:{' '}
+        {trolleyTotal}
+        <div>{displayTrolleyContents(trolleyItems)}</div>
+      </span>
+    </div>
+  );
+};
+
+export default Trolley;
