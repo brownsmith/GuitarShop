@@ -20,7 +20,7 @@
 }
 
 body {
-  background-color: #ddd;
+  background-color: #eee;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -28,11 +28,10 @@ body {
 
 .App-title {
   font-family: 'GuitarRumble';
-  font-size: 5em;
+  font-size: 2em;
   margin: 0;
-  color: #555;
-  letter-spacing: -6px;
-  text-shadow: 1px 1px #fff;
+  color: #eee;
+  letter-spacing: 0px;
 }
 
 @media only screen and (max-width: 500px) {
@@ -48,7 +47,7 @@ body {
 }
 
 .header {
-  background-color: #aaa;
+  background-color: #777;
   border-bottom: 1px solid #6c757d;
   padding: 20px;
   position: fixed;
