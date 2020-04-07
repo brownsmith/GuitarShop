@@ -19,7 +19,9 @@ const ProductsWrapper = ({
 }) => {
   useEffect(
     () => {
-      fetchProducts();
+      fetchProducts().catch(err => {
+        console.log('api error: ', err);
+      });
     },
     [fetchProducts]
   );
