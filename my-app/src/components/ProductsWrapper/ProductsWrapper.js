@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, createContext } from 'react';
 import './ProductsWrapper.css';
 import Product from '../../containers/Product/Product.js';
+
+const MyContext = createContext('defaultValue');
+console.log('MyContext', MyContext);
 
 const renderProducts = data => {
   if (data) {
