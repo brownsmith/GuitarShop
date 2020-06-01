@@ -1,6 +1,7 @@
 import React, { useEffect, createContext } from 'react';
 import './ProductsWrapper.css';
 import Product from '../../containers/Product/Product.js';
+import { useSwitches } from '../App/App';
 
 const MyContext = createContext('defaultValue');
 console.log('MyContext', MyContext);
@@ -29,6 +30,9 @@ const ProductsWrapper = ({
     [fetchProducts]
   );
 
+  const activeOffer = useSwitches();
+  console.log('Active Offer:', activeOffer);
+
   return (
     <div
       className="productsWrapperComponent"
@@ -42,7 +46,7 @@ const ProductsWrapper = ({
         <>
           <div className="productSorting">
             <button onClick={() => orderProducts(data)} className="button">
-              High to Low
+              High to Low {activeOffer}
             </button>
             <button onClick={() => orderProducts(data)} className="button">
               Low to High

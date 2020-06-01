@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../store';
@@ -9,6 +9,9 @@ import Footer from '../../components/Footer/Footer';
 import HomePage from '../../components/HomePage/HomePage';
 import Navigation from '../../components/Navigation/Navigation';
 import TrolleyPage from '../../containers/TrolleyPage/TrolleyPage';
+
+const SwitchContext = React.createContext({ activeOffer: 'GIBSON' });
+export const useSwitches = () => useContext(SwitchContext);
 
 export default class App extends Component {
   render() {
@@ -23,7 +26,9 @@ export default class App extends Component {
             </header>
             <main>
               <Route exact path="/" component={HomePage} />
-              <Route path="/products" component={ProductWrapper} />
+              <SwitchContext.Provider>
+                <Route path="/products" component={ProductWrapper} />
+              </SwitchContext.Provider>
               <Route path="/trolley" component={TrolleyPage} />
             </main>
             <Footer />
